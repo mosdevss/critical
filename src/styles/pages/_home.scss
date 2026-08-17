@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+@use 'sass:color';
+
+.home {
+  &__hero {
+    @include flex-center;
+    flex-direction: column;
+    gap: $spacing-lg;
+    min-height: 80vh;
+    padding: $spacing-xl $spacing-lg;
+    text-align: center;
+    background: linear-gradient(135deg, $color-dark 0%, color.adjust($color-primary, $lightness: -20%) 100%);
+    color: $color-light;
+
+    h1 {
+      span {
+        color: $color-primary;
+      }
+    }
+
+    p {
+      max-width: 55ch;
+      opacity: 0.85;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

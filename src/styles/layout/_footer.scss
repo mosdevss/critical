@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.footer {
+  @include flex-center;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding: $spacing-xl $spacing-lg;
+  background-color: $color-dark;
+  color: rgba($color-light, 0.7);
+  font-size: 0.875rem;
+  text-align: center;
+}

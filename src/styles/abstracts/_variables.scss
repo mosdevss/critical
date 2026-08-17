@@ -1,0 +1,53 @@
+// ── Colour Palette ──────────────────────────────────────────
+$color-primary:   #6c63ff !default;
+$color-secondary: #ff6584 !default;
+$color-accent:    #43e97b !default;
+$color-dark:      #1a1a2e !default;
+$color-light:     #f4f4f8 !default;
+$color-text:      #2d2d2d !default;
+
+// ── CSS Custom Properties ────────────────────────────────────
+:root {
+  --color-primary:   #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent:    #{$color-accent};
+  --color-dark:      #{$color-dark};
+  --color-light:     #{$color-light};
+  --color-text:      #{$color-text};
+}
+
+// ── Typography ───────────────────────────────────────────────
+$font-family-base:    'Inter', system-ui, sans-serif !default;
+$font-family-heading: 'Outfit', system-ui, sans-serif !default;
+$font-size-base:      1rem !default;
+$line-height-base:    1.6 !default;
+
+// ── Spacing Scale ────────────────────────────────────────────
+$spacing-xs: 0.25rem !default;
+$spacing-sm: 0.5rem  !default;
+$spacing-md: 1rem    !default;
+$spacing-lg: 2rem    !default;
+$spacing-xl: 4rem    !default;
+
+// ── Breakpoints ──────────────────────────────────────────────
+$breakpoint-sm:  576px  !default;
+$breakpoint-md:  768px  !default;
+$breakpoint-lg:  992px  !default;
+$breakpoint-xl:  1200px !default;
+$breakpoint-xxl: 1400px !default;
+
+// ── Border Radius ────────────────────────────────────────────
+$border-radius-sm:   0.25rem !default;
+$border-radius-md:   0.5rem  !default;
+$border-radius-lg:   1rem    !default;
+$border-radius-pill: 50rem   !default;
+
+// ── Transitions ──────────────────────────────────────────────
+$transition-fast:   150ms ease !default;
+$transition-normal: 300ms ease !default;
+$transition-slow:   500ms ease !default;
+
+// ── Shadows ──────────────────────────────────────────────────
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06) !default;
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1),  0 2px 4px rgba(0, 0, 0, 0.06) !default;
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05) !default;

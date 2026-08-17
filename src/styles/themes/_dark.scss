@@ -1,0 +1,17 @@
+// Dark theme — applied via [data-theme='dark'] on <html> or <body>
+[data-theme='dark'] {
+  --color-light:  #1a1a2e;
+  --color-dark:   #f4f4f8;
+  --color-text:   #e8e8f0;
+
+  background-color: var(--color-light);
+  color: var(--color-text);
+
+  .header {
+    background-color: #0f0f1a;
+  }
+
+  .footer {
+    background-color: #0f0f1a;
+  }
+}

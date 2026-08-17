@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: $color-light;
+  color: $color-text;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 3px;
+}

@@ -1,0 +1,19 @@
+// ── Strip Unit ───────────────────────────────────────────────
+@use 'sass:math';
+
+@function strip-unit($number) {
+  @return math.div($number, ($number * 0 + 1));
+}
+
+// ── px to rem ────────────────────────────────────────────────
+@function rem($px, $base: 16) {
+  @return math.div(strip-unit($px), $base) * 1rem;
+}
+
+// ── Clamp fluid value ────────────────────────────────────────
+@function fluid($min-size, $max-size, $min-vw: 320px, $max-vw: 1440px) {
+  $slope: math.div(strip-unit($max-size) - strip-unit($min-size),
+                    strip-unit($max-vw)   - strip-unit($min-vw));
+  $intercept: strip-unit($min-size) - $slope * strip-unit($min-vw);
+  @return clamp(#{$min-size}, #{$slope * 100}vw + #{$intercept * 1px}, #{$max-size});
+}

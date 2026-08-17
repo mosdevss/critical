@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.header {
+  @include flex-between;
+  padding: $spacing-md $spacing-lg;
+  background-color: $color-dark;
+  color: $color-light;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: $shadow-sm;
+
+  &__logo {
+    font-family: $font-family-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacing-lg;
+
+    a {
+      @include transition;
+      color: $color-light;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

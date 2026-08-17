@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+// ── Responsive Breakpoints ───────────────────────────────────
+@mixin respond-to($breakpoint) {
+  @if      $breakpoint == sm  { @media (min-width: $breakpoint-sm)  { @content; } }
+  @else if $breakpoint == md  { @media (min-width: $breakpoint-md)  { @content; } }
+  @else if $breakpoint == lg  { @media (min-width: $breakpoint-lg)  { @content; } }
+  @else if $breakpoint == xl  { @media (min-width: $breakpoint-xl)  { @content; } }
+  @else if $breakpoint == xxl { @media (min-width: $breakpoint-xxl) { @content; } }
+  @else { @warn 'Unknown breakpoint: #{$breakpoint}'; }
+}
+
+// ── Flexbox Helpers ──────────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ── Visually Hidden (Accessibility) ─────────────────────────
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// ── Truncate Text ────────────────────────────────────────────
+@mixin truncate($width: 100%) {
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ── Smooth Transition ────────────────────────────────────────
+@mixin transition($props: all, $duration: $transition-normal) {
+  transition: $props $duration;
+}
+
+// ── Absolute Cover ───────────────────────────────────────────
+@mixin cover($position: absolute) {
+  position: $position;
+  inset: 0;
+}
+
+// ── Aspect Ratio ─────────────────────────────────────────────
+@mixin aspect-ratio($ratio: 16 / 9) {
+  aspect-ratio: $ratio;
+}

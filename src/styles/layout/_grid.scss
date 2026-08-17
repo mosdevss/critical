@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.container {
+  @extend %container;
+}
+
+.grid {
+  display: grid;
+  gap: $spacing-md;
+
+  &--2 { grid-template-columns: repeat(2, 1fr); }
+  &--3 { grid-template-columns: repeat(3, 1fr); }
+  &--4 { grid-template-columns: repeat(4, 1fr); }
+
+  @include respond-to(md) {
+    &--2, &--3, &--4 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  gap: $spacing-md;
+
+  &--center  { @include flex-center; }
+  &--between { @include flex-between; }
+  &--wrap    { flex-wrap: wrap; }
+  &--col     { flex-direction: column; }
+}

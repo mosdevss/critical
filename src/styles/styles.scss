@@ -1,0 +1,28 @@
+// ============================================================
+// styles.scss — Root Entry Point
+// 7-in-1 SCSS Architecture with Dart Sass (@use / @forward)
+//
+// Load order: abstracts → vendors → base → layout
+//             → components → pages → themes
+// ============================================================
+
+// 1. Abstracts — loaded as * so vars/mixins need no namespace prefix
+@use 'abstracts' as *;
+
+// 2. Vendors — third-party resets and libraries
+@use 'vendors';
+
+// 3. Base — global HTML element defaults
+@use 'base';
+
+// 4. Layout — macro-level structural sections
+@use 'layout';
+
+// 5. Components — reusable, isolated UI elements
+@use 'components';
+
+// 6. Pages — page-specific overrides
+@use 'pages';
+
+// 7. Themes — visual themes (dark mode, admin, etc.)
+@use 'themes';
