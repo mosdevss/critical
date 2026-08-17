@@ -7,7 +7,7 @@ import Navigation from './components/ui/Navigation'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Navigation />
       <App />
 </BrowserRouter>

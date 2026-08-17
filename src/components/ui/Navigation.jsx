@@ -4,9 +4,9 @@ const Navigation = ()=> {
   return (
     <nav>
       <ul>
-        <li><Link to="/critical/">Home</Link></li>
-        <li><Link to="/critical/about">About</Link></li>
-        <li><Link to="/critical/contact">Contact</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
     </nav>
   )
